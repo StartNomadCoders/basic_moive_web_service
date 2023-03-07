@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script>
+    const root = document.getElementById('root')
+    const span =React.createElement("span",{id: "sexy-span" , style : {color : "red"}},"Hello I'm a span"); // 생성하고자하는 element 작성
+    //render -사용자에게 보여주다
+    ReactDOM.render(span,root)
+</script>
+</html>
