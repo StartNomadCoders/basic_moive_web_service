@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script>
+    const root = document.getElementById('root')
+    let counter = 0;
+    function countUp() {
+        counter = counter+1;
+        reRender();
+    }
+    function reRender() {
+        ReactDOM.render(<Container/>,root);
+    }
+    const Container = () => (
+        <div>
+            <h3>Total clicks : {counter}</h3>
+            <button onClick={countUp}>Click me</button>
+        </div>
+    )
+    reRender();
+</script>
+</html>
