@@ -14,10 +14,11 @@
         reRender();
     }
     function reRender() {
-        ReactDOM.render(<Container/>,root);
+        ReactDOM.render(<Container/>, root);
     }
+    
     const Container = () => (
-        <div>
+        <div >
             <h3>Total clicks : {counter}</h3>
             <button onClick={countUp}>Click me</button>
         </div>
