@@ -1,6 +1,6 @@
 import React from "react";
 
-function Btn({text,fontSize, changesValue}) {
+function Btn({text,changesValue}) {
     const style = {
         backgroundColor : 'blue'
     }
@@ -13,28 +13,21 @@ function Btn({text,fontSize, changesValue}) {
             padding: '10px 20px',
             borderRadius: '5px',
             border: 'none',
-            fontSize: fontSize
+            fontSize: '16px',
         }}>
             {text}
         </button>
 
     );
 }
-Btn.propTypes = {
-    text: PropTypes.string.isRequired,
-    //isRequired = 필수입력
-    fontSize: PropTypes.number
-}
 const MemorizeBtn = React.memo(Btn)
 function App(){
     const [value, setValue] = React.useState("Save Changes")
     const changesValue = () => setValue("Revert Changes")
-    const style= {
-        backgroundColor: #000
-    }
+   
     return(
         <div>
-            <MemorizeBtn text={value} fontSize={18} changesValue={changesValue}/>
+            <MemorizeBtn text={value} changesValue={changesValue}/>
             <MemorizeBtn text="Continue"/>
         </div>
     )
