@@ -2,21 +2,21 @@ import { useState } from 'react';
 
 function App() {
   const [todo, setTodo] = useState('');
-  const [todos,setTodos] = useState([])
+  const [todos, setTodos] = useState([]);
   const onChange = (e) => setTodo(e.target.value);
   const onSubmit = (e) => {
-      e.preventDefault()
-      if(todo === ""){
-          return;
-      }
-      setTodos(curArr => [todo,...curArr] )
-      setTodo("")
-  }
+    e.preventDefault();
+    if (todo === '') {
+      return;
+    }
+    setTodos((curArr) => [todo, ...curArr]);
+    setTodo('');
+  };
 
-    console.log(todos)
+  console.log(todos);
   return (
     <div>
-        <h1>My TO DOS.. ({todos.length})</h1>
+      <h1>My TO DOS.. ({todos.length})</h1>
       <form onSubmit={onSubmit}>
         <input
           onChange={onChange}
@@ -26,6 +26,10 @@ function App() {
         />
         <button>Add todo.. </button>
       </form>
+      <hr />
+      {todos.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
     </div>
   );
 }
