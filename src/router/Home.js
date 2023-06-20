@@ -1,5 +1,6 @@
+import Movie from 'components/jsx/Movie';
 import { useEffect, useState } from 'react';
-import Movie from '../components/jsx/Movie';
+import Detail from 'router/Detail';
 function Home() {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
@@ -22,6 +23,7 @@ function Home() {
         <h1>Loading...</h1>
       ) : (
         <div>
+          <Detail />
           {movies.map((v) => (
             <Movie
               key={v.id}
