@@ -27,6 +27,7 @@ function Home() {
           {movies.map((v) => (
             <Movie
               key={v.id}
+              id={v.id}
               coverImage={v.medium_cover_image}
               title={v.title}
               summary={v.summary}
