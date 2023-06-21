@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/StartNomadCoders/basic_moive_web_service.git/static/js/main.c4af9b0a.js",
-    "index.html": "/StartNomadCoders/basic_moive_web_service.git/index.html",
-    "main.c4af9b0a.js.map": "/StartNomadCoders/basic_moive_web_service.git/static/js/main.c4af9b0a.js.map"
+    "main.js": "/StartNomadCoders/basic_moive_web_service/static/js/main.c4af9b0a.js",
+    "index.html": "/StartNomadCoders/basic_moive_web_service/index.html",
+    "main.c4af9b0a.js.map": "/StartNomadCoders/basic_moive_web_service/static/js/main.c4af9b0a.js.map"
   },
   "entrypoints": [
     "static/js/main.c4af9b0a.js"
