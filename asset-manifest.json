@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/basic_moive_web_service/static/js/main.c4af9b0a.js",
+    "main.js": "/basic_moive_web_service/static/js/main.c79f590f.js",
     "index.html": "/basic_moive_web_service/index.html",
-    "main.c4af9b0a.js.map": "/basic_moive_web_service/static/js/main.c4af9b0a.js.map"
+    "main.c79f590f.js.map": "/basic_moive_web_service/static/js/main.c79f590f.js.map"
   },
   "entrypoints": [
-    "static/js/main.c4af9b0a.js"
+    "static/js/main.c79f590f.js"
   ]
 }
