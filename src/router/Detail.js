@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 function Detail() {
   const { id } = useParams();
   const [movies, setMovies] = useState({});
-  const [loading, setLoading] = useState(true);
+  const [loadings, setLoading] = useState(true);
   const getMovie = async () => {
     try {
       const response = await fetch(
@@ -13,7 +13,6 @@ function Detail() {
       const json = await response.json();
       setLoading(false);
       setMovies(json.data.movie);
-      console.log(movies);
     } catch (error) {
       console.log('Error fetching movie:', error);
     }
@@ -25,11 +24,13 @@ function Detail() {
 
   return (
     <div>
-      {loading ? (
-        <h1>Loading...</h1>
+      {loadings ? (
+        <h1>loading...</h1>
       ) : (
         <div>
-          <h1>{movies.title}</h1>
+          <h2>{movies.title}</h2>
+          <img src={movies.medium_cover_image} alt={movies.title} />
+          <div>{movies.description_intro}</div>
         </div>
       )}
     </div>
